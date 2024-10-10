@@ -1,2 +1,4 @@
 # sequence-classification
 develop a small LSTM for the IMDB problem and achieve good accuracy.
+I used the IMDB dataset I used the top 5,000 words from the dataset and split the data into training and testing , then I truncated and pad the input sequence so they’re all the same length for modeling , the first layer is an embedded layer that uses 32-length vector to represent each word , the next layer is a LSTM layer with 100 memory units , finally because this is a classification problem I used a Dense output layer with a single neuron and a sigmoid activation function to make 0 or 1 predictions for the two classes (good and bad ) in the problem .
+Then because it’s a classification problem , log loss is used as the loss function ( cross entropy in keras ) and I used the ADAM optimization algorithm, and I made the model fit only three epochs , once fit I estimated how he performance of the model and reached an accuracy of 87.59%
